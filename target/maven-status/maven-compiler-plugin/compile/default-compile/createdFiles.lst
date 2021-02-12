@@ -1,0 +1,5 @@
+com/tcc/config/ResourceServerConfiguration.class
+com/tcc/config/SecurityProperties$JwtProperties.class
+com/tcc/config/SecurityProperties.class
+com/tcc/controller/UserController.class
+com/tcc/apigateway/ApiGatewayApplication.class
