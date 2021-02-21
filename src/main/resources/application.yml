@@ -16,3 +16,6 @@ zuul:
     oauth:
       path: /oauth/**
       url: http://localhost:8081/oauth
+    processo-industrial:
+      path: /processoindustrial/**
+      url: http://localhost:8082/api
