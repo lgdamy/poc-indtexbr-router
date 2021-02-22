@@ -2,20 +2,15 @@
 security:
   jwt:
     public-key: classpath:public.txt
-
 server:
-  port: 8089
-
+  port: 8080
 
 zuul:
   sensitiveHeaders:
   routes:
-    spring-security-oauth-resource:
-      path: /resource/**
-      url: http://localhost:8083/resource
     oauth:
       path: /oauth/**
-      url: http://localhost:8081/oauth
+      url: http://tcc-auth-api-service.default.svc.cluster.local:8080/oauth
     processo-industrial:
       path: /processoindustrial/**
-      url: http://localhost:8082/api
+      url: http://tcc-proc-ind-api-service.default.svc.cluster.local:8080/api
