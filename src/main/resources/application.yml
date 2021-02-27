@@ -10,11 +10,10 @@ zuul:
   routes:
     oauth:
       path: /oauth/**
-      url: http://tcc-auth-api-service.default.svc.cluster.local:8080/oauth
+      url: ${API_OAUTH_ADDRESS:'http://localhost:8083/oauth'}
     processo-industrial:
       path: /processoindustrial/**
-
-      url: http://tcc-proc-ind-api-service.default.svc.cluster.local:8080/api
+      url: ${API_PROCESSO_INDUSTRIAL_ADDRESS:'http://localhost:8081/api'}
 spring:
   rabbitmq:
     host: ${RABBIT_ADDRESS:localhost}
