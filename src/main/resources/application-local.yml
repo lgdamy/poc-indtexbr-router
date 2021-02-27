@@ -1,0 +1,28 @@
+
+security:
+  jwt:
+    public-key: classpath:public.txt
+
+server:
+  port: 8089
+
+
+zuul:
+  sensitiveHeaders:
+  routes:
+    spring-security-oauth-resource:
+      path: /resource/**
+      url: http://localhost:8083/resource
+    oauth:
+      path: /oauth/**
+      url: http://localhost:8081/oauth
+    processoindustrial:
+      service-id: processoindustrial
+      path: /processoindustrial/**
+      url: http://localhost:8082/api
+
+spring:
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
