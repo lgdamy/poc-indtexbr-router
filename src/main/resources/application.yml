@@ -10,10 +10,13 @@ zuul:
   routes:
     oauth:
       path: /oauth/**
-      url: ${API_OAUTH_ADDRESS:'http://localhost:8083/oauth'}
+      url: ${API_OAUTH_ADDRESS:http://localhost:8081/oauth}
     processo-industrial:
       path: /processoindustrial/**
-      url: ${API_PROCESSO_INDUSTRIAL_ADDRESS:'http://localhost:8081/api'}
+      url: ${API_PROCESSO_INDUSTRIAL_ADDRESS:http://localhost:8082/api}
+    consultorias-assessorias:
+      path: /consultoriasassessorias/**
+      url: ${API_CONSULTORIAS_ASSESSORIAS_ADDRESS:http://localhost:8084/api}
 spring:
   rabbitmq:
     host: ${RABBIT_ADDRESS:localhost}

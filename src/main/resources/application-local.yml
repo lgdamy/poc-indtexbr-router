@@ -6,7 +6,6 @@ security:
 server:
   port: 8089
 
-
 zuul:
   sensitiveHeaders:
   routes:
@@ -20,7 +19,10 @@ zuul:
       service-id: processoindustrial
       path: /processoindustrial/**
       url: http://localhost:8082/api
-
+    consultoriasassessorias:
+      service-id: consultoriasassessorias
+      path: /consultoriasassessorias/**
+      url: http://localhost:8084/api
 spring:
   rabbitmq:
     host: localhost

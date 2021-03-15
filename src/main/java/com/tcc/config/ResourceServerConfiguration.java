@@ -53,7 +53,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     public void configure(HttpSecurity http) throws Exception {
         http.cors();
         http.authorizeRequests()
-                .antMatchers("/oauth/**","/stomp/**")
+                .antMatchers("/oauth/**","/stomp/**","/swagger-ui.html","/webjars/**","/swagger-resources/**","/swagger/**")
                 .permitAll()
                 .antMatchers(HttpMethod.GET, ROOT_PATTERN).access("#oauth2.hasScope('read')")
                 .antMatchers(HttpMethod.POST, ROOT_PATTERN).access("#oauth2.hasScope('write')")
