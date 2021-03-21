@@ -17,6 +17,9 @@ zuul:
     consultorias-assessorias:
       path: /consultoriasassessorias/**
       url: ${API_CONSULTORIAS_ASSESSORIAS_ADDRESS:http://localhost:8084/api}
+    normas:
+      path: /normas/**
+      url: ${API_NORMAS_ADDRESS:http://localhost:8085/api}
 spring:
   rabbitmq:
     host: ${RABBIT_ADDRESS:localhost}
